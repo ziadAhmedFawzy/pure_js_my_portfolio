@@ -1,0 +1,848 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-header {
+    animation-name: scrollNow;
+    animation-duration: 0.8s;
+    position: fixed;
+    width: 100%;
+    background-color: aliceblue;
+    z-index: 999;
+    padding-top: 0;
+    opacity: 1;
+}
+
+@keyframes scrollNow {
+    0% {
+        opacity: 1;
+        position: fixed;
+        padding-top: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        position: fixed;
+        padding-top: 20px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.who-am-i {
+    position: relative;
+    line-height: 60px;
+}
+.who-am-i::after {
+    content: '';
+    width: 2px;
+    height: 40%;
+    background-color: #6f00f1;
+    position: absolute;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.show {
+    opacity: 1 !important;
+    animation-name: show;
+    animation-duration: 0.5s;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        margin-top: -10px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+.animation-img {
+    animation-name: animation-img;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    width: 500px;
+}
+@keyframes animation-img {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+.before-after {
+    position: relative;
+    margin: 20px 0;
+}
+.before-after::before {
+    content: '--';
+}
+.before-after::after {
+    content: '--';
+}
+.SHOW {
+    opacity: 1 !important;
+    animation-name: SHOW;
+    animation-duration: 1.5s;
+    overflow: hidden;
+}
+@keyframes SHOW {
+    0% {
+        opacity: 0;
+        margin-top: -50px;
+        background-color: transparent;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+        height: 700px;
+    }
+}
+.balls {
+    position: relative;
+}
+.balls::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #6f00f1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -13px;
+    left: -3px;
+}
+.balls::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #6f00f1;
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    left: -3px;
+}
+.move {
+    width: 300px;
+    padding: 0;
+    animation-name: maove;
+    animation-duration: 1s;
+    overflow: hidden;
+}
+@keyframes maove {
+    0% {
+        width: 0;
+        padding: 0;
+    }
+    100% {
+        width: 300px;
+        padding : 10px
+    }
+}
+.goTo::before {
+    content: 'go to ';
+}
+input:focus {
+    outline: none;
+}
+
+@media screen and (min-width:720px) and (max-width: 1032px) {
+    .welcome {
+        height: 800px !important;
+    }
+    .about {
+        height: 1300px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+}
+
+@media screen and (min-width:572px) and (max-width: 720px) {
+    .welcome {
+        height: 800px !important;
+    }
+    .about {
+        height: 1300px !important;
+        flex-flow: column wrap !important;
+        text-align: center !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .hide {
+        display: none !important;
+    }
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 47px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+}
+
+@media screen and (min-width:380px) and (max-width: 572px) {
+    .welcome {
+        height: 800px !important;
+    }
+    .about {
+        height: 1300px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 47px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    .animation-img {
+        width: 100%;
+    }
+    .welocne-left h3 {
+        font-size: 30px !important;
+    }
+}
+
+@media screen and (min-width:333px) and (max-width: 380px) {
+    .welcome {
+        height: 850px !important;
+    }
+    .about {
+        height: 1400px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 47px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 298px) and (max-width: 333px) {
+    .welcome {
+        height: 900px !important;
+    }
+    .about {
+        height: 1500px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 47px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width: 298px) {
+    .welcome {
+        height: 900px !important;
+    }
+    .about {
+        height: 1600px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 20px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 286px) and (max-width: 272px) {
+    .welcome {
+        height: 900px !important;
+    }
+    .about {
+        height: 1700px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 20px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 244px) and (max-width: 286px) {
+    .welcome {
+        height: 900px !important;
+    }
+    .about {
+        height: 1800px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 10px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 205px) and (max-width: 244px) {
+    .welcome {
+        height: 900px !important;
+    }
+    .about {
+        height: 2000px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        height: 200px !important;
+        position: absolute;
+        height: 613px !important;
+        right: 5px;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-widtH: 191px) and (max-width: 205px) {
+    .welcome {
+        height: 900px !important;
+        justify-content: flex-start !important;
+    }
+    .about {
+        height: 2200px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        display: none !important;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 191px) {
+    .welcome {
+        height: 900px !important;
+        justify-content: flex-start !important;
+    }
+    .about {
+        height: 2700px !important;
+    }
+    .SHOW {
+        animation-duration: 0.5s;
+    }
+    .hero {
+        order: 2 !important;
+    }
+    .about-me {
+        order: 1 !important;
+    }
+    .line-skills {
+        height: 100%;
+    }
+    .skill {
+        height: 900px !important;
+        flex-flow: column wrap;
+    }
+    .skills-list {
+        text-align: center;
+    }
+    .line-skills {
+        display: none !important;
+    }
+    .contact {
+        flex-flow: column wrap !important;
+        margin: 10px;
+    }
+    .hide {
+        display: none !important;
+    }
+    input {
+        width: 90% !important;
+    }
+    .parent-left-contact {
+        width: 100% !important;
+    }
+    .header {
+        justify-content: space-around !important;
+    } 
+    .nav-bar {
+        display: inline-block !important;
+    }
+    .welocne-left {
+        text-align: center !important;
+    }
+    .parentPortfolio {
+        flex-flow: column wrap !important;
+    }
+    .parentPortfolio div {
+        margin: 20px auto !important;
+    }
+    .card {
+        width: 50% !important;
+    }
+    .img-portfolio {
+        width: 100% !important;
+    }
+}
